@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: Fredoka, Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #9584f4;
+}
+
+h1, .selection-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selection-row {
+    margin-top: 9em;
+}
+
+button {
+    background: none;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8em;
+    transition: 100ms;
+    opacity: .8;
+}
+
+button + button {
+    margin-left: 2em;
+}
+
+button:hover {
+    transform: scale(1.5);
+}
+
+.result {
+    display: flex;
+    font-size: 5em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+span {
+    margin-right: 3em;
+    margin-left: 3em;
+    opacity: .8;
+}
+
+
+
+   
+   
