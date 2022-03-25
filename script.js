@@ -1,5 +1,6 @@
 const choices = document.querySelectorAll('button')
 const score= document.getElementById('score')
+const result = document.getElementById('result');
 
 choices.forEach(choice => choice.addEventListener('click' , playGame))
 
@@ -21,7 +22,7 @@ function playGame(e) {
     const playerChoice = e.target.id;
     const computerChoice = computerPlay();
     const winner = getWinner(playerChoice, computerChoice)
-    console.log(winner)
+    showWinner(winner, computerChoice);
 }
 
 //Winner Choice
@@ -50,4 +51,15 @@ function getWinner(p, c) {
   }
 
   // Score
+  function showWinner(winner, computerChoice) {
+    if (winner === 'player') {
+      result.innerHTML = `
+      You Won!`;
+    } else if (winner === 'computer') {
+      result.innerHTML = `
+      You Lost!`;
+    } else {
+      result.innerHTML = `
+        It's a Draw!`;
+    } }   
   
