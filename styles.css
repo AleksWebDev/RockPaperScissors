@@ -70,15 +70,23 @@ button:hover {
 
 #result {
     display: flex;
-    font-size: 5em;
     justify-content: center;
-    margin-top: 1em;
+    position: relative;
+    margin-top: em;
+    font-size: 5em;
 }
 
 span {
    font-size: 1em;
 }
 
+.score {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 5em;
+    margin-left: 35px;
+}
 
 
    

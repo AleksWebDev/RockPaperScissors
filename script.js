@@ -1,6 +1,11 @@
 const choices = document.querySelectorAll('button')
-const score= document.getElementById('score')
+const scoreP = document.getElementById('scoreP')
+const scoreC = document.getElementById('scoreC')
 const result = document.getElementById('result');
+const scoreboard = {
+  player: 0,
+  computer: 0
+}
 
 choices.forEach(choice => choice.addEventListener('click' , playGame))
 
@@ -53,13 +58,19 @@ function getWinner(p, c) {
   // Score
   function showWinner(winner, computerChoice) {
     if (winner === 'player') {
+      scoreboard.player++;
       result.innerHTML = `
       You Won!`;
     } else if (winner === 'computer') {
+      scoreboard.computer++;
       result.innerHTML = `
       You Lost!`;
     } else {
       result.innerHTML = `
         It's a Draw!`;
-    } }   
+    }   
+
+    scoreP.innerHTML = `${scoreboard.player}` 
+    scoreC.innerHTML = `${scoreboard.computer}`;
+  }
   
